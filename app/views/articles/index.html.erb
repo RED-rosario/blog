@@ -3,7 +3,7 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-       <a href = "http://google.com.cl">
+       <a href="/articles/<%= article.id %>">
        <%= article.title %>
        </a>
    </li>  
