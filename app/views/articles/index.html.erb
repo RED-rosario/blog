@@ -1,4 +1,12 @@
-<h1>¡Hola, Rails¡</h1>
-<h1>¡ Hola, Marcia!</h1>
+<h1>Artículos</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %>
+    </li> 
+  <% end %>
+</ul>
+
 
 
