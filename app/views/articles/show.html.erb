@@ -19,6 +19,9 @@
     <%= comment.body %>
   </p>
 <% end %>
+  
+<h2>Comments</h2>
+<%= render @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
