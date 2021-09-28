@@ -7,6 +7,19 @@
     <p><%= @article.title%></p>
     <p>Hola Modificado</p>
 </div>    
+<h2>Comentarios</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
 <h2>Add a comment:</h2>
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
