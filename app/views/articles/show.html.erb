@@ -6,7 +6,8 @@
     <p><strong>Titulo:</strong></p>
     <p><%= @article.title%></p>
     <p>Hola Modificado</p>
-</div>    
+</div>  
+
 <h2>Comentarios</h2>
 <% @article.comments.each do |comment| %>
   <p>
@@ -24,6 +25,8 @@
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
